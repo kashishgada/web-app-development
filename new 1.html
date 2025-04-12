@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Component Order Form</title>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2em;
+        }
+        section {
+            margin: 3em;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 2em;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 0.7em;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+  </style>
+</head>
+<body>
+  <header>
+        <h1>Computer Components Order Form</h1>
+  </header>
+  <section>
+        <label for="component">Select Components:</label>
+      <select id="component">
+            <option value="Keyboard">Keyboard</option>
+            <option value="Mouse">Mouse</option>
+            <option value="Printer">Printer</option>
+            <option value="storage">Storage</option>
+      </select>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" min="1" placeholder="Enter quantity">
+        <button onclick="submitOrder()">Submit Order</button>
+  </section>
+
+            <script>
+        function submitOrder() {
+ const component = document.getElementById('component').value;
+  const quantity = document.getElementById('quantity').value;
+
+ alert(`Order Placed!\nComponent: ${component}\nQuantity: ${quantity}`);
+        }
+    </script>
+
+</body>
+</html>
